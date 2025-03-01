@@ -8,16 +8,16 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["DevHabbit.WebApi/DevHabbit.WebApi.csproj", "DevHabbit.WebApi/"]
-RUN dotnet restore "DevHabbit.WebApi/DevHabbit.WebApi.csproj"
+RUN dotnet restore "DevHabit.WebApi/DevHabit.WebApi.csproj"
 COPY . .
 WORKDIR "/src/DevHabbit.WebApi"
-RUN dotnet build "DevHabbit.WebApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "DevHabit.WebApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "DevHabbit.WebApi.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "DevHabit.WebApi.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "DevHabbit.WebApi.dll"]
+ENTRYPOINT ["dotnet", "DevHabit.WebApi.dll"]

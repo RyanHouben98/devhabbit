@@ -1,4 +1,4 @@
-namespace DevHabbit.WebApi;
+namespace DevHabit.WebApi;
 
 public class WeatherForecast
 {

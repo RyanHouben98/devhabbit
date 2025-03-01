@@ -1,17 +1,17 @@
 ﻿services:
-  devhabbit.webapi:
-    image: devhabbit.webapi
+  devhabit.webapi:
+    image: devhabit.webapi
     build:
       context: .
-      dockerfile: DevHabbit.WebApi/Dockerfile
+      dockerfile: DevHabit.WebApi/Dockerfile
     ports:
       - 8080:8080
       - 8081:8081
     environment:
-      - OTEL_EXPORTER_OTLP_ENDPOINT=http://devhabbit.aspire-dashboard:18889
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://devhabit.aspire-dashboard:18889
       - OTEL_EXPORTER_OTLP_PROTOCOL=grpc
       
-  devhabbit.aspire-dashboard:
+  devhabit.aspire-dashboard:
     image: "mcr.microsoft.com/dotnet/aspire-dashboard:9.0"
     environment:
       DOTNET_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS: true

@@ -1,7 +1,7 @@
 using System.Security.Cryptography;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DevHabbit.WebApi.Controllers;
+namespace DevHabit.WebApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]

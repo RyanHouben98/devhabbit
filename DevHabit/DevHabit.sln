@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevHabbit.WebApi", "DevHabbit.WebApi\DevHabbit.WebApi.csproj", "{A3A44720-F1D3-47A6-BEE7-D5C4D096B1D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevHabit.WebApi", "DevHabit.WebApi\DevHabit.WebApi.csproj", "{A3A44720-F1D3-47A6-BEE7-D5C4D096B1D0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DC2494D4-46EB-4E9F-9022-71BAFBA9838C}"
 EndProject
